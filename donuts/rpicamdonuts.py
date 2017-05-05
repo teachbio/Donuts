@@ -8,7 +8,7 @@ import numpy as np
 class RPiCamDonuts(Donuts):
     
     def construct_object(self, image_input):
-        image = np.empty(100, np.uinit8).reshape(10,10)
+        image = np.empty(100, np.uinit16).reshape(10,10)
         header = {NAXIS:2, NAXIS1:10, NAXIS:10, exposure: self.exposure_keyname}
         if isinstance(image_input, str):
             with fits.open(filename) as hdulist:
